@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - app-comics',
-    title: 'app-comics',
+    titleTemplate: '%s - App Comics',
+    title: 'XKCD',
     htmlAttrs: {
       lang: 'en',
     },

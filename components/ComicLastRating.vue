@@ -34,24 +34,7 @@
   </div>
 </template>
 <script>
-export default {
-  // props: {
-  //   comic: {
-  //     type: Object,
-  //     default: null,
-  //   },
-  // },
-  // data: () => ({
-  //   loading: false,
-  //   rating: null,
-  // }),
-  // watch: {
-  //   rating(val) {
-  //     this.$store.commit('comics/setComic', this.comic)
-  //     this.$store.commit('comics/rateComic', val)
-  //   },
-  // },
-  // methods: {},
-}
+export default {}
 </script>
+
 <style lang="scss"></style>

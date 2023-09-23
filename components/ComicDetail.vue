@@ -1,6 +1,14 @@
 <template>
-  <div>
-    <v-card class="mx-auto my-5" max-width="800px">
+  <div class="mb-7">
+    <div v-if="loading" class="d-flex justify-center mb-10">
+      <v-progress-circular
+        :size="70"
+        :width="7"
+        color="primary"
+        indeterminate
+      />
+    </div>
+    <v-card v-else class="mx-auto my-5" max-width="800px">
       <v-toolbar color="#1976d2" text flat>
         <v-toolbar-title class="headline white--text">{{
           comic.title
@@ -53,9 +61,9 @@ export default {
       type: Number,
       default: null,
     },
+    loading: { Boolean, default: true },
   },
   data: () => ({
-    loading: false,
     rating: null,
   }),
   watch: {

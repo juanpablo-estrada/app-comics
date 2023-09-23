@@ -1,21 +1,18 @@
 <template>
   <div>
-    <div v-if="loading" class="d-flex justify-center">
-      <v-progress-circular
-        :size="70"
-        :width="7"
-        color="primary"
-        indeterminate
-      />
-    </div>
-
-    <div v-else class="d-flex justify-space-around">
+    <div
+      :class="{
+        '': !$store.state.comics.comic,
+        'd-flex justify-space-around': $store.state.comics.comic,
+      }"
+    >
       <comic-detail
         :comic="currentComic"
+        :loading="loading"
         :number-current="numberCurrentComic"
         @updateCurrentComic="getRandomComic"
       />
-      <v-divider class="mt-10" vertical />
+      <v-divider class="mt-10 mx-4" vertical />
       <comic-last-rating />
     </div>
 
@@ -79,3 +76,4 @@ export default {
   },
 }
 </script>
+<style lang="scss"></style>

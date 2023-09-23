@@ -7,7 +7,7 @@
         >
         <v-spacer />
       </v-toolbar>
-      <v-form ref="form" v-model="valid">
+      <v-form ref="form" v-model="valid" @submit.prevent="saveName">
         <v-card-text class="mt-5 text-subtitle-1">
           <v-text-field
             v-model="name"
